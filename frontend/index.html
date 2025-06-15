@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barcode Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="icon-container">
+            <i class="fas fa-barcode"></i>
+          </div>
+          <h1>Barcode Generator</h1>
+          <p class="subtitle">
+            Generate and validate barcodes quickly and easily
+          </p>
+        </div>
+
+        <form class="form">
+          <div class="form-group">
+            <label for="dueDate">
+              <i class="fas fa-calendar-alt"></i>
+              Due Date
+            </label>
+            <input type="date" id="dueDate" required />
+          </div>
+
+          <div class="form-group">
+            <label for="value">
+              <i class="fas fa-dollar-sign"></i>
+              Value ($)
+            </label>
+            <input
+              type="number"
+              id="value"
+              step="0.01"
+              min="0"
+              placeholder="0.00"
+              required
+            />
+          </div>
+
+          <div class="button-group">
+            <button
+              type="button"
+              id="generateButton"
+              class="btn btn-primary"
+              onclick="generateBarcode()"
+            >
+              <i class="fas fa-magic"></i>
+              Generate Barcode
+            </button>
+            <button
+              type="button"
+              id="btn-validate-code"
+              class="btn btn-secondary"
+              onclick="validateCode()"
+              disabled
+            >
+              <i class="fas fa-check-circle"></i>
+              Validate Code
+            </button>
+          </div>
+        </form>
+
+        <div class="result" id="result">
+          <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>Generating barcode...</p>
+          </div>
+          <div id="resultContent" style="display: none">
+            <div class="result-header">
+              <h3><i class="fas fa-barcode"></i> Generated Barcode</h3>
+            </div>
+            <div class="barcode-container">
+              <div class="barcode-wrapper">
+                <img id="barcodeImage" alt="Generated Barcode" />
+              </div>
+            </div>
+            <div class="barcode-text">
+              <label>Numeric Code:</label>
+              <div class="code-container">
+                <p id="barcodeText" class="code"></p>
+                <button
+                  type="button"
+                  class="copy-btn"
+                  onclick="copyToClipboard()"
+                  title="Copy code"
+                >
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+            </div>
+            <div id="validation-message" class="validation-message"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
