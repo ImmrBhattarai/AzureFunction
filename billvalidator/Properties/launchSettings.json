@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "billvalidator": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7062 --cors \"*\"",
+      "applicationUrl": "http://0.0.0.0:7062"
+    }
+  }
+}
