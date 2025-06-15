@@ -1,6 +1,7 @@
 # Barcode Validator
 
 Azure project utilizing Service Bus Queue and Azure Function (in C#) using Visual Studio
+This project is a development of a service responsible for checking and authenticating bank slips, with the aim of guaranteeing the validity of the information. 
 
 ## Overview
 
