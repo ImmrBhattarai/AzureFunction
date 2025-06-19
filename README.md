@@ -81,6 +81,8 @@ JSON
   "dueDate": "2025-07-01"
 }
 ```
+![image](https://github.com/user-attachments/assets/a115efb1-b414-4311-aa1e-3a72f6bd3058)
+
 
 **Example response:**
 
