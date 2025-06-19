@@ -82,6 +82,8 @@ JSON
 }
 ```
 ![image](https://github.com/user-attachments/assets/a115efb1-b414-4311-aa1e-3a72f6bd3058)
+![image](https://github.com/user-attachments/assets/61bcca53-1cc2-4b44-9030-28f8fedfd489)
+
 
 
 **Example response:**
